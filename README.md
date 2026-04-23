@@ -6,7 +6,7 @@
 
 | 課程 | 預覽網址 | 狀態 |
 |------|----------|------|
-| 起步班（S8） | [https://heyitseliii.github.io/nii-student-handbooks/kickoff/](https://heyitseliii.github.io/nii-student-handbooks/kickoff/) | 🧪 測試中 |
+| 起步班（S8） | [https://heyitseliii.github.io/nii-student-handbooks/walking/](https://heyitseliii.github.io/nii-student-handbooks/walking/) | 🧪 測試中 |
 | 起跑班 | — | 🚧 規劃中 |
 | 起飛班 | — | 🚧 規劃中 |
 | 語感練功坊 | — | 🚧 規劃中 |
@@ -23,5 +23,5 @@
 git clone git@github.com:heyitseliii/nii-student-handbooks.git
 cd nii-student-handbooks
 python3 -m http.server 8000
-# 開 http://localhost:8000/kickoff/
+# 開 http://localhost:8000/walking/
 ```
