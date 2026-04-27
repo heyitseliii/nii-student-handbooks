@@ -589,20 +589,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div class="col">
       <h3>操作步驟</h3>
       <div class="nsteps" style="margin-top:0">
-        <div class="nrow"><div class="nnum">1</div><div><div class="ntitle">登入 nii.school</div><div class="ndesc">點右上角 <span class="hlt">學習中心</span></div></div></div>
-        <div class="nrow"><div class="nnum">2</div><div><div class="ntitle">左側選單 → 預約課程</div></div></div>
-        <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">確認左上角「已選課程」已打勾</div></div></div>
-        <div class="nrow"><div class="nnum">4</div><div><div class="ntitle">選擇時段 → 點「預約」</div><div class="ndesc">每週課程都需個別登記</div></div></div>
+        <div class="nrow"><div class="nnum">1</div><div><div class="ntitle">登入 nii.school → 點右上角「<span class="hlt">學習中心</span>」</div></div></div>
+        <div class="nrow"><div class="nnum">2</div><div><div class="ntitle">左側選單 → 點「<span class="hlt">預約課程</span>」</div></div></div>
+        <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">「已選課程」中只留下你的班別</div><div class="ndesc">取消其他不相關的課程，方便篩選</div></div></div>
+        <div class="nrow"><div class="nnum">4</div><div><div class="ntitle">下方週曆點時段 → 確認資訊 → 點「<span class="hlt">預約</span>」</div><div class="ndesc">出現「預約成功」即完成，每週都需個別登記</div></div></div>
       </div>
       <div class="note" style="margin-top:10px;font-size:15px;line-height:1.7">為了掌握上課出席狀況和提供課程會議連結，請同學務必在口說課開始前完成課程登記，表示當週會來上課。可以<strong>一次登記完 12 週的課程</strong>會比較方便！有任何操作上的問題歡迎私訊 LINE 客服。<br>⚠️ 上課登記預定於 <strong>2026/6/8 開課直播後</strong>開放</div>
     </div>
     <div class="col" style="display:flex;flex-direction:column">
-      <h3>操作畫面截圖</h3>
-      <div class="ss-placeholder">
-        <div class="sp-icon">📸</div>
-        <div class="sp-text">截圖待補</div>
-        <div class="sp-sub">課程登記頁面截圖<br>提供後即更新</div>
-      </div>
+      <h3>操作畫面示範</h3>
+      <video class="slide-video" muted loop playsinline preload="metadata"
+             style="width:100%;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);background:var(--n100)">
+        <source src="assets/registration.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </div></div></section>
@@ -971,6 +970,22 @@ document.getElementById('stage').addEventListener('touchend',e=>{const dx=e.chan
 
 updateControls();
 document.getElementById('progress').style.width=`${(1/total)*100}%`;
+
+// 投影片內影片：進到該頁才播放，離開暫停並回到開頭
+document.querySelectorAll('.slide-video').forEach(video => {
+  const slide = video.closest('.slide');
+  if (!slide) return;
+  const sync = () => {
+    if (slide.classList.contains('is-active')) {
+      video.play().catch(()=>{});
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
+  new MutationObserver(sync).observe(slide, {attributes:true, attributeFilter:['class']});
+  sync();
+});
 </script>
 </body>
 </html>
