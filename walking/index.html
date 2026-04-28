@@ -89,7 +89,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .cover-title{font-size:clamp(44px,7vw,80px);font-weight:900;line-height:1.1;letter-spacing:-.025em;color:var(--n800)}
 .cover-title-grad{font-size:clamp(22px,3.2vw,36px);font-weight:800;line-height:1.3;letter-spacing:-.015em;background:linear-gradient(135deg,var(--p300),var(--p500));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:6px}
 .cover-sub{font-size:clamp(16px,1.6vw,20px);color:var(--text-muted);margin-top:10px}
-.cover-logo{font-size:12px;color:var(--p600);padding:6px 12px;background:rgba(255,255,255,.8);border-radius:8px;width:fit-content;border:1px solid var(--p100)}
+.cover-logo{padding:7px 14px;background:var(--p600);border-radius:8px;width:fit-content;display:flex;align-items:center}
+.cover-logo img{height:26px;width:auto;display:block}
 .deco1{position:absolute;top:-100px;left:-80px;width:500px;height:500px;border-radius:50%;background:rgba(117,218,212,.22);filter:blur(80px);pointer-events:none}
 .deco2{position:absolute;bottom:-60px;right:-40px;width:420px;height:420px;border-radius:50%;background:rgba(255,190,80,.16);filter:blur(70px);pointer-events:none}
 
@@ -243,8 +244,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <!-- Top nav -->
 <nav id="top-nav">
   <a href="index.html" class="nav-brand">
-    <div class="nav-dot"><span>泥日</span></div>
-    <span class="nav-brand-text">泥日教育</span>
+    <img src="assets/logo-color.png" alt="泥日教育 Nii School" style="height:32px;width:auto;display:block">
   </a>
   <span class="nav-title">全方位日文起步班 — 學生手冊 2026.06</span>
   <div class="nav-right">
@@ -265,7 +265,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <div class="card th-cover">
 <div class="si">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:auto;position:relative;z-index:1">
-    <div class="cover-logo">泥日教育 Nii School</div>
+    <div class="cover-logo"><img src="assets/logo-white.png" alt="泥日教育 Nii School"></div>
     <div style="font-size:14px;color:var(--text-muted)">nii.school</div>
   </div>
   <div style="margin:auto 0;position:relative;z-index:1">
@@ -293,15 +293,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   <div class="toc-cols">
     <div class="toc-col">
       <div class="toc-item" onclick="goTo(2)"><span class="toc-num">01</span><span class="toc-lbl">開課前設定 — LINE &amp; Zoom &amp; Check List</span></div>
-      <div class="toc-item" onclick="goTo(6)"><span class="toc-num">02</span><span class="toc-lbl">課程架構 — 每週四步驟 &amp; 行事曆</span></div>
-      <div class="toc-item" onclick="goTo(9)"><span class="toc-num">03</span><span class="toc-lbl">Step 1 線上文法課 &amp; 觀看錄影</span></div>
-      <div class="toc-item" onclick="goTo(13)"><span class="toc-num">04</span><span class="toc-lbl">Step 2 課前作業繳交</span></div>
+      <div class="toc-item" onclick="goTo(7)"><span class="toc-num">02</span><span class="toc-lbl">課程架構 — 每週四步驟 &amp; 行事曆</span></div>
+      <div class="toc-item" onclick="goTo(10)"><span class="toc-num">03</span><span class="toc-lbl">Step 1 線上文法課 &amp; 觀看錄影</span></div>
+      <div class="toc-item" onclick="goTo(14)"><span class="toc-num">04</span><span class="toc-lbl">Step 2 課前作業繳交</span></div>
     </div>
     <div class="toc-col">
-      <div class="toc-item" onclick="goTo(15)"><span class="toc-num">05</span><span class="toc-lbl">Step 3 全日文口說課 &amp; 課程登記</span></div>
-      <div class="toc-item" onclick="goTo(20)"><span class="toc-num">06</span><span class="toc-lbl">Step 4 學長姐解題時間</span></div>
-      <div class="toc-item" onclick="goTo(23)"><span class="toc-num">07</span><span class="toc-lbl">退費規定</span></div>
-      <div class="toc-item" onclick="goTo(24)"><span class="toc-num">08</span><span class="toc-lbl">修課 &amp; 畢業證書</span></div>
+      <div class="toc-item" onclick="goTo(16)"><span class="toc-num">05</span><span class="toc-lbl">Step 3 全日文口說課 &amp; 課程登記</span></div>
+      <div class="toc-item" onclick="goTo(21)"><span class="toc-num">06</span><span class="toc-lbl">Step 4 學長姐解題時間</span></div>
+      <div class="toc-item" onclick="goTo(24)"><span class="toc-num">07</span><span class="toc-lbl">退費規定</span></div>
+      <div class="toc-item" onclick="goTo(25)"><span class="toc-num">08</span><span class="toc-lbl">修課 &amp; 畢業證書</span></div>
     </div>
   </div>
 </div></div></section>
@@ -358,25 +358,50 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div class="col">
       <h3>Zoom 設定步驟</h3>
       <div class="nsteps" style="margin-top:0">
-        <div class="nrow"><div class="nnum">1</div><div><div class="ntitle">開啟 Zoom → 點左上角帳號頭像 → 設定</div></div></div>
-        <div class="nrow"><div class="nnum">2</div><div><div class="ntitle">「音訊」分頁 → 測試喇叭 & 麥克風</div></div></div>
-        <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">「視訊」分頁 → 確認鏡頭畫面正常</div></div></div>
-        <div class="nrow"><div class="nnum">4</div><div><div class="ntitle">修改 Zoom 顯示名稱</div><div class="ndesc">格式：<span class="hlt">泥日姓名 + 日文名</span>（例：陳小明 ちん）</div></div></div>
+        <div class="nrow"><div class="nnum">1</div><div><div class="ntitle">開啟 Zoom → 點右上角帳號頭像 → 「<span class="hlt">設定</span>」</div></div></div>
+        <div class="nrow"><div class="nnum">2</div><div><div class="ntitle">「<span class="hlt">音訊</span>」分頁 → 點「測試喇叭」&「測試麥克風」</div></div></div>
+        <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">「<span class="hlt">視訊</span>」分頁 → 確認鏡頭畫面正常</div></div></div>
       </div>
       <div class="note" style="margin-top:10px">⚠️ 務必用電腦進教室，手機可能造成音訊問題</div>
     </div>
     <div class="col" style="display:flex;flex-direction:column">
-      <h3>操作畫面截圖</h3>
-      <div class="ss-placeholder">
-        <div class="sp-icon">📸</div>
-        <div class="sp-text">截圖待補</div>
-        <div class="sp-sub">Zoom 設定畫面截圖<br>提供後即更新</div>
-      </div>
+      <h3>操作畫面示範</h3>
+      <video class="slide-video" muted loop playsinline preload="metadata"
+             style="width:100%;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);background:var(--n100)">
+        <source src="assets/zoom-setup.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </div></div></section>
 
-<!-- 6 ▪ Check List -->
+<!-- 6 ▪ 修改 Zoom 顯示名稱 -->
+<section class="slide" data-title="修改 Zoom 顯示名稱" data-tag="開課前" data-icon="✏️">
+<div class="card th-white">
+<div class="si">
+  <div class="lbl">開課前設定</div>
+  <div class="h2">✏️ 如何修改 Zoom 顯示名稱？</div>
+  <div class="twocol" style="margin-top:14px">
+    <div class="col">
+      <div class="ic ic-warn" style="margin-top:0"><div class="ic-icon">📝</div><div class="ic-title">命名規則</div><div class="ic-body"><span class="hlt">泥日教育登記的名字</span> _ <span class="hlt">日文名</span><br>例：<strong>陳小明_ チン</strong></div></div>
+      <h3 style="margin-top:14px">操作步驟</h3>
+      <div class="nsteps" style="margin-top:0">
+        <div class="nrow"><div class="nnum">1</div><div><div class="ntitle">進入 Zoom 會議 → 點底部「<span class="hlt">與會者</span>」</div></div></div>
+        <div class="nrow"><div class="nnum">2</div><div><div class="ntitle">右側清單找到自己 → 滑鼠移到名字上</div></div></div>
+        <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">點「<span class="hlt">更多</span>」→ 選「<span class="hlt">重新命名</span>」</div></div></div>
+        <div class="nrow"><div class="nnum">4</div><div><div class="ntitle">輸入新名稱 → 點「<span class="hlt">變更</span>」</div></div></div>
+      </div>
+    </div>
+    <div class="col" style="display:flex;flex-direction:column">
+      <h3>操作畫面示範</h3>
+      <video class="slide-video" muted loop playsinline preload="metadata"
+             style="width:100%;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1);background:var(--n100)">
+        <source src="assets/zoom-rename.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div></div></section>
+
+<!-- 7 ▪ Check List -->
 <section class="slide" data-title="上課前確認清單" data-tag="開課前" data-icon="✅">
 <div class="card th-white">
 <div class="si">
