@@ -7,7 +7,7 @@
 | 課程 | 預覽網址 | 狀態 |
 |------|----------|------|
 | 起步班（S8） | [https://heyitseliii.github.io/nii-student-handbooks/walking/](https://heyitseliii.github.io/nii-student-handbooks/walking/) | 🧪 測試中 |
-| 起跑班 | — | 🚧 規劃中 |
+| 起跑班（S7） | [https://heyitseliii.github.io/nii-student-handbooks/running/](https://heyitseliii.github.io/nii-student-handbooks/running/) | 🧪 測試中 |
 | 起飛班 | — | 🚧 規劃中 |
 | 語感練功坊 | — | 🚧 規劃中 |
 
